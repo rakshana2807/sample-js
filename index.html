@@ -1,0 +1,117 @@
+<hr><h1>Simple Calculator</h1>
+<input id="num1">
+<input id="num2"><br><br>
+<button onclick="add()">Add</button>
+<button onclick="sub()">Sub</button>
+<button onclick="mul()">Mul</button>
+<button onclick="div()">Div</button>
+<h3 id="result">Result</h3><hr>
+<h1>Random Number</h1>
+<h3>Guess the Number</h3>
+<input id="gnum">
+<button onclick="check()">Check</button>
+<h3 id="result1">You are Right/Wrong</h3>
+<h3 id="score">Your Score : 10</h3><hr>
+<script>
+    var n1=document.getElementById("num1")
+    var n2=document.getElementById("num2")
+    var result=document.getElementById("result")
+    function add()
+    {
+    var n11 = Number(n1.value)
+    var n22 = Number(n2.value)
+    total=n11+n22
+    result.textContent=total
+    }
+    function sub()
+    {
+    var n11 = Number(n1.value)
+    var n22 = Number(n2.value)
+    total=n11-n22
+    result.textContent=total
+    }
+    function mul()
+    {
+    var n11 = Number(n1.value)
+    var n22 = Number(n2.value)
+    total=n11*n22
+    result.textContent=total
+    }
+    function div()
+    {
+    var n11 = Number(n1.value)
+    var n22 = Number(n2.value)
+    total=n11/n22
+    result.textContent=total
+    }
+    //random number//
+    var gnum=document.getElementById("gnum") 
+    var result1=document.getElementById("result1")
+    var rnum=Math.floor(Math.random()*10)+1
+    var tscore=10
+    function check()
+    {
+        var enternum=gnum.value
+        if(rnum==enternum)
+        {
+        result1.textContent="Right"
+        alert("You Won..!")
+        }
+        else 
+        {
+        tscore=tscore-1
+        score.textContent="Your score :"+tscore
+        result1.textContent="Wrong"
+        
+        }
+    }
+</script>
+<style>
+    body{
+        color: white;
+        background:rgb(2, 2, 52);
+    }
+    h1{
+        border: 2px solid rgb(255, 255, 255);
+        padding: 10px;
+        text-align: center;
+        border-radius: 30px;
+        text-shadow: 0px 0px 10px rgb(98, 145, 255);
+    }
+    input{
+        border-radius: 10px;
+        height: 40px;
+        width: 100px;
+        padding: 10px;
+        margin: 0px 5px;
+        font-size: 20px;
+        color: black;
+        border: none;
+    }
+    button{
+        border-radius: 10px;
+        height: 40px;
+        width: fit-content;
+        padding: 10px;
+        margin: 0px 5px;
+        font-size: 20px;
+        color: black;
+    }
+    #result, #score{
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        height: 20px;
+        width: fit-content;
+        padding: 10px 10px;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+   button:hover{
+        transform: scale(1.1);
+
+    }
+    input:hover{
+        transform: scale(1.1);
+        background-color: rgb(239, 240, 255);
+    }
+</style>
