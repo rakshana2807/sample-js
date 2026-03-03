@@ -1,0 +1,45 @@
+<button onclick="show()">Show</button>
+<div id="overlay"></div>
+<div id="pop">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit magnam corporis fuga quidem ut error ipsa, rem suscipit illo laboriosam modi optio doloremque maxime iusto fugit porro sequi nihil!
+<button onclick="closepop()">Close</button></div>
+<script>
+    var pop=document.getElementById("pop")
+    var overlay=document.getElementById("overlay")
+    function show()
+    {
+        pop.style.display="block"
+        overlay.style.display="block"
+
+    }
+    function closepop()
+    {
+        overlay.style.display="none"
+        pop.style.display="none"
+        
+    }
+</script>
+<style>
+    #overlay{
+        background-color: darkmagenta;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 50%;
+        z-index: 1;
+        display: none;
+        
+    }
+    #pop{
+        position: absolute;
+        left: 30%;
+        background-color: rgb(255, 255, 255);
+        z-index: 3;
+        padding: 20px;
+        width: 30%;
+        display: none;
+        border-radius: 10px;
+    }
+    
+</style>

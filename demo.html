@@ -1,0 +1,41 @@
+
+<html>
+<head>
+    <title>Event Delegation Example</title>
+</head>
+<body>
+    <h2>Event Delegation Example</h2>
+
+    <div id="parent">
+        <h1 class="btn1">Button 1</h1>
+        <h1 class="btn2">Button 2</h1>
+        <h1 class="btn3">Button 3</h1>
+        <p id="para">This is a paragraph</p>
+    </div>
+
+    <script>
+        var parent = document.getElementById("parent")
+        let paragraph= document.getElementById("para")
+        parent.addEventListener("click", function(event){
+            if(event.target.matches("h1")){
+            event.target.textContent="clicked"
+            if(event.target.matches(".btn1"))
+            {
+                paragraph.textContent="para 1"
+            }
+            if(event.target.matches(".btn2"))
+            {
+                paragraph.textContent="para 2"
+            }
+            if(event.target.matches(".btn3"))
+            {
+                paragraph.textContent="para 3"
+            }
+            }
+        
+        })
+    </script>
+    
+
+</body>
+</html>
