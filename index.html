@@ -42,7 +42,7 @@
 <button id="rak" onclick="ups(event)">LinkedIn</button>
 <hr>
 
-<!-- DELETE-->
+<!-- DEvarE-->
 
 <h3 onclick="del(event)">One</h3>
 <h3 onclick="del(event)">two</h3>
@@ -51,15 +51,17 @@
 <h3 onclick="del(event)">five</h3>
 <hr>
 
-<!-- DELETE-->
+<!-- DEvarE-->
 
 <input id="input">
 <button class="btn" onclick="add(event)">Add</button>
 <ul id="list">
     <li>hello
-        <button onclick="deletelist(event)">Delete</button>
+        <button onclick="devarelist(event)">Devare</button>
     </li>
 </ul>
+
+
 
 <script>
     var n1 = document.getElementById("num1")
@@ -136,11 +138,11 @@
     var input = document.getElementById("input")
     function add() {
         listelement = document.createElement("li")
-        listelement.innerHTML = input.value + "<button onclick='deletelist(event)'>Delete</button>"
+        listelement.innerHTML = input.value + "<button onclick='devarelist(event)'>Delete</button>"
         list.append(listelement)
 
     }
-    function deletelist(event) {
+    function devarelist(event) {
         event.target.parentElement.remove()
     }
     

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equipment List Checkout</title>
+</head>
+<body>
+
+    <h1>Equipment List Checkout</h1>
+
+    <input id="inp1" placeholder="Equipment Name">
+    <input id="inp2" placeholder="Issued To">
+    <button onclick="add()">Issue</button>
+
+    <ul id="container"></ul>
+
+    <script>
+
+        const input1 = document.getElementById("inp1")
+        const input2 = document.getElementById("inp2")
+        const container = document.getElementById("container")
+
+        // Array to store issued equipment
+        let equipmentList = []
+
+        function add(){
+
+            let itemName = input1.value.trim()
+            let issuedTo = input2.value.trim()
+
+            if(itemName === "" || issuedTo === ""){
+                alert("Please enter details")
+                return
+            }
+
+            // Check if already exists
+            if(equipmentList.includes(itemName)){
+                alert("Already Issued ⚠")
+                return
+            }
+
+            // Store in array
+            equipmentList.push(itemName)
+
+            // Create list item
+            let list = document.createElement("li")
+            list.textContent = itemName + " - " + issuedTo
+
+            container.append(list)
+
+            // Clear inputs
+            input1.value = ""
+            input2.value = ""
+
+            console.log(equipmentList)
+
+        }
+
+    </script>
+
+</body>
+</html>
