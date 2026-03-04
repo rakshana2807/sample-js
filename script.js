@@ -23,7 +23,7 @@ function add() {
     list.innerHTML = itemName + " - " + price + "₹"  + "<button onclick='del(event, " + price + ")'>Remove</button>"
     container.append(list)
     currenttotal += price
-    total.textContent="Total Price : " + currenttotal
+    total.textContent="Total Price : " + currenttotal + "₹"
     input1.value = ""
     input2.value= ""
 
