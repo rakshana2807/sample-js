@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div>
+        <input id="name" type="text" required>
+        <input id="user" type="text" required>
+        <button id="btn" onclick="add()">Issue</button>
+        <ul id="lst"></ul>
+    </div>
+    <script>
+        var equipment = document.getElementById("name")
+        var user = document.getElementById("user")
+        eqip = []
+
+        function add() {
+
+            if(equipment.value==="" || user.value===""){
+                alert("Please enter the input")
+            }
+
+            if (eqip.includes(name.value)) {
+                alert("already Issued")
+            }
+            else {
+                list = document.createElement("li")
+                list.textContent = equipment.value.trim() + " - " + user.value.trim()
+                lst.append(list)
+            }
+            eqip.push(name.value)
+
+            equipment.value = ""
+            user.value = ""
+        }
+    </script>
+</body>
+
+</html>

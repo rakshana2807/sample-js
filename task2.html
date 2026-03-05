@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="register">
+        <h1>Register</h1>
+        <form id="form">
+            <div class="inp">
+                <div class="input-data">
+                    <label>Name :</label>
+                    <input type="text" placeholder="Enter your name" required>
+                    <div class="error"></div>
+                </div>
+                <div class="input-data">
+                    <label>Email :</label>
+                    <input type="email" placeholder="Enter your mail id" required>
+                    <div class="error"></div>
+                </div>
+                <div class="input-data">
+                    <label>DOB :</label>
+                    <input type="date" placeholder="select your dob" required>
+                    <div class="error"></div>
+                </div>
+                <div class="input-data">
+                    <label>Password :</label>
+                    <input type="password" placeholder="Enter password" required id="p">
+                    <div class="error"></div>
+                </div>
+                <div class="input-data">
+                    <label>Confirm password :</label>
+                    <input type="password" placeholder="confirm password" required id="cp">
+                    <div class="error"></div>
+                </div>
+                <button type="button" id="btn" onclick="submited()">Submit</button>
+                <p id="sub">wait...</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+
+        var result = document.getElementById("sub")
+
+        function submited() {
+            var pass = document.getElementById("p").value.trim()
+
+            var cpass = document.getElementById("cp").value.trim()
+            if (pass === cpass) {
+                result.textContent = "Submitted"
+                result.style.color= "green"
+            }
+            else {
+                result.textContent = " Not Submitted"
+                result.style.color= "red"
+
+            }
+        }
+    </script>
+</body>
+<style>
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inp{
+    border: 2px solid blue;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    flex-direction: column;
+}
+input{
+    padding:5px;
+    margin: 5px;
+     width: 300px;
+}
+#sub{
+    justify-content: center;
+}
+
+</style>
+</html>
