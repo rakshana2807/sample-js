@@ -1,0 +1,40 @@
+body{
+    font-family: Arial;
+    text-align: center;
+}
+
+.box{
+    background: navy;
+    padding:20px;
+    border-radius:10px;
+    width:300px;
+    margin:auto;
+}
+
+ul{
+    color:white;
+    text-align:left;
+}
+
+li{
+    margin:8px 0;
+}
+
+button,input{
+    padding:6px 12px;
+    border-radius:6px;
+    border:2px solid navy;
+    margin:4px;
+}
+
+#timer{
+    font-size:40px;
+    margin-top:20px;
+}
+
+.active{
+    background:yellow;
+    color:black;
+    padding:4px;
+    border-radius:5px;
+}

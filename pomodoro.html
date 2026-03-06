@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task Timer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Task Timer</h1>
+
+<div class="box">
+    <input id="taskInput" placeholder="Enter your task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+</div>
+
+<h2 id="timer">01:00</h2>
+
+<div class="controls">
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resumeTimer()">Resume</button>
+    <button onclick="resetTimer()">Reset</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
